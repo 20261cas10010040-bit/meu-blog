@@ -1,1 +1,229 @@
+<<<<<<< HEAD
 
+=======
+/* ========================= */
+/* 💖 FUNDO GERAL */
+/* ========================= */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom, #fff0f5, #ffe4ec);
+}
+
+/* ========================= */
+/* ✨ TRANSIÇÃO GLOBAL */
+/* ========================= */
+* {
+    transition: all 0.2s ease-in-out;
+}
+
+/* ========================= */
+/* 🌸 CABEÇALHO */
+/* ========================= */
+header {
+    background: linear-gradient(135deg, #ff9ecb, #cba0ff);
+    color: white;
+    text-align: center;
+    padding: 20px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* 💫 Brilho animado */
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.2);
+    transform: skewX(-20deg);
+    animation: brilho 4s infinite;
+}
+
+@keyframes brilho {
+    0% { left: -100%; }
+    50% { left: 120%; }
+    100% { left: 120%; }
+}
+
+/* ========================= */
+/* 📸 FOTO */
+/* ========================= */
+.foto-perfil {
+    width: 150px;
+    border-radius: 50%;
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* ========================= */
+/* 🎀 MENU */
+/* ========================= */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+/* Linha animada */
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: white;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+}
+
+/* Hover suave */
+nav ul li a:hover {
+    color: #ffe4ec;
+}
+
+/* Página ativa */
+.ativo {
+    border-bottom: 2px solid white;
+}
+
+/* ========================= */
+/* 📄 CONTEÚDO */
+/* ========================= */
+main {
+    padding: 20px;
+}
+
+/* ========================= */
+/* 💖 POSTS */
+/* ========================= */
+.post {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+    transition: 0.4s;
+}
+
+/* Hover 3D */
+.post:hover {
+    transform: perspective(800px) rotateX(3deg) translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Texto */
+.post p {
+    line-height: 1.6;
+    color: #444;
+}
+
+/* ========================= */
+/* ✨ ANIMAÇÃO DE ENTRADA */
+/* ========================= */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: aparecer 0.8s ease forwards;
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Delay em sequência */
+.post:nth-of-type(1) { animation-delay: 0.2s; }
+.post:nth-of-type(2) { animation-delay: 0.4s; }
+.post:nth-of-type(3) { animation-delay: 0.6s; }
+
+/* ========================= */
+/* 💕 BOTÕES */
+/* ========================= */
+button {
+    background: linear-gradient(135deg, #ff9ecb, #cba0ff);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Hover botão */
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* 🔙 Botão voltar */
+.btn-voltar {
+    background: linear-gradient(135deg, #ff9ecb, #cba0ff);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.btn-voltar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* ========================= */
+/* 📱 RESPONSIVO */
+/* ========================= */
+@media (max-width: 768px) {
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .foto-perfil {
+        width: 120px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .post {
+        padding: 15px;
+    }
+
+    body {
+        font-size: 15px;
+    }
+}
+>>>>>>> 4b7747d (Primeiro commit)
